@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <a class="navbar-brand" href="/">cryptograpie</a>
+      </nav>
+   
+    <div class="container">
+        
+           <div class="input-group mb-3">
+            
+
+                <form class="form-inline my-5" name="form_q_p" id="form_q_p" >
+                    <button type="submit" class="btn btn-primary mb-2"  >generate q and p</button>
+                    <div class="form-group mb-2">
+                      <label for="staticEmail2 mr-2" > P</label>
+                      <input type="text" class="form-control ml-2" id="param_p" >
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                      <label for="inputPassword2" >Q</label>
+                      <input type="text"  class="form-control" id="param_q">
+                    </div>
+                      <div class="form-group mx-5">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text bg-warning" for="inputGroupSelect01">n relative</label>
+                          </div>
+                         
+                        <input class="form-control" id="param_n" readonly >
+                        
+                      </div>
+
+                  </form>
+
+            </div>
+            <div class="input-group  mb-3 mx-auto">
+
+                <form class="form-inline mx-5" name="form_e_d" id="form_e_d" >
+                  
+                  <div class="form-group mx-sm-3 mb-2">
+                    <div  class=" btn btn-secondary px-2 py-2 mr-2">generate e</div>
+                    <input type="text" class="form-control" id="param_e" onchange="handleEchangeEvent()">
+                    <div id="errorTaker">
+
+
+                    </div>
+                  </div>
+                    <div class="form-group mx-5">
+                      <button  class="btn btn-success" onclick={generate_d()}>generate d</button>
+                      <input class="form-control" id="param_d" placeholder="inverse de e">
+                      
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="input-group mx-auto">
+              <form   name="form_sms_chif_Dechif" id="form_sms_chif_Dechif">
+
+                  <h3 class="display-3 text-center">veuillez saisir le message</h3>
+                  <textarea class="form-control" id="message" type="text" name="message" placeholder="tapez le message ici...">
+
+
+                  </textarea>
+                  <div class="row mx-auto">
+                      <div class="col">
+                          <button class="btn btn-outline-primary px-5" name="convertir_chiffre" id="convertir_chiffre" type="submit" style="width: 100%;">enchiffre</button>
+                      </div>
+                      <div class="col">
+                        <button class="btn btn-outline-primary px-5" name="reconvertir_lettre" id="reconvertir_lettre" style="width: 100%;" >enlettre </button>
+                      </div>
+                      <div class="col">
+                        <button class="btn btn-outline-primary px-5" name="chiffrer" id="effacer" style="width: 100%;">effacer</button>
+                        
+                      </div>
+                      <div class="col">
+                        <button class="btn btn-outline-primary px-5" name="chiffrer" id="chiffrer" style="width: 100%;">crypter</button>
+                        
+                      </div>
+                      <div class="col">
+                        <button class="btn btn-outline-primary px-5" name="dechiffre" id="dechiffrer" style="width: 100%;">decrypter</button>
+
+                      </div>
+
+                  </div>
+
+              </form>
+            </div>
+        
+
+    </div>
+    <script src="./logic.js">
+
+    </script>
+    
+</body>
+</html>
